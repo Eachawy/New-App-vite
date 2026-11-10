@@ -2,9 +2,7 @@ import React, { Suspense } from 'react';
 import { Route } from 'react-router';
 
 import Home from 'app/modules/home/home';
-import PrivateRoute from 'app/shared/auth/private-route';
-import ErrorBoundaryRoutes from "app/shared/error/error-boundary-routes";
-
+import ErrorBoundaryRoutes from 'app/shared/error/error-boundary-routes';
 
 const loading = <div>loading ...</div>;
 

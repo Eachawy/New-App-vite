@@ -17,9 +17,13 @@ export default mergeConfig(
       },
       coverage: {
         provider: 'v8',
-        statements: 85,
-        branches: 75,
-        lines: 85,
+        include: ['app/**/*.{ts,tsx}'],
+        exclude: ['app/**/*.spec.{ts,tsx}', 'app/setup-tests.ts', 'app/test-utils.tsx', 'app/typings.d.ts', 'app/index.tsx'],
+        thresholds: {
+          statements: 85,
+          branches: 75,
+          lines: 85,
+        },
         reportsDirectory: fileURLToPath(new URL('./target/test-results/lcov-report', import.meta.url)),
       },
     },

@@ -1,5 +1,6 @@
 import { translate } from 'react-jhipster';
 
+import type { Middleware, UnknownAction } from '@reduxjs/toolkit';
 import { isAxiosError } from 'axios';
 import { toast } from 'react-toastify';
 
@@ -28,8 +29,11 @@ const getFieldErrorsToasts = (fieldErrors: FieldErrorVM[]): ToastMessage[] =>
     return { message: `Error on field "${fieldName}"`, key: `error.${fieldError.message}`, data: { fieldName } };
   });
 
-// eslint-disable-next-line complexity
-export default () => next => action => {
+type NotificationAction = UnknownAction & { error?: any; payload?: any };
+
+// eslint-disable-next-line complexity -- split into a typed AppError mapper in Phase 2
+const notificationMiddleware: Middleware = () => next => (rawAction: unknown) => {
+  const action = rawAction as NotificationAction;
   const { error, payload } = action;
 
   /**
@@ -96,3 +100,5 @@ export default () => next => action => {
 
   return next(action);
 };
+
+export default notificationMiddleware;

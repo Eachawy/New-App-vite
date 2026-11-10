@@ -5,14 +5,14 @@ interface IErrorBoundaryProps {
 }
 
 interface IErrorBoundaryState {
-  readonly error: any;
-  readonly errorInfo: any;
+  readonly error?: Error;
+  readonly errorInfo?: React.ErrorInfo;
 }
 
 class ErrorBoundary extends React.Component<IErrorBoundaryProps, IErrorBoundaryState> {
   readonly state: IErrorBoundaryState = { error: undefined, errorInfo: undefined };
 
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     this.setState({
       error,
       errorInfo,

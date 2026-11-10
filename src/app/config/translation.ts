@@ -1,5 +1,6 @@
 import { Storage, TranslatorContext } from 'react-jhipster';
 
+import type { AppDispatch } from 'app/config/store';
 import { setLocale } from 'app/shared/reducers/locale';
 
 TranslatorContext.setDefaultLocale('en');
@@ -13,10 +14,11 @@ export const languages: any = {
 
 export const locales = Object.keys(languages).sort();
 
-export const isRTL = (lang: string): boolean => languages[lang] && languages[lang].rtl;
+export const isRTL = (lang: string): boolean => Boolean(languages[lang]?.rtl);
 
 export const setTextDirection = (lang: string) => {
   document.querySelector('html')!.setAttribute('dir', isRTL(lang) ? 'rtl' : 'ltr');
 };
 
-export const registerLocale = (store): Promise<unknown> => store.dispatch(setLocale(Storage.session.get('locale', 'en')));
+export const registerLocale = (store: { dispatch: AppDispatch }): Promise<unknown> =>
+  store.dispatch(setLocale(Storage.session.get('locale', 'en')));

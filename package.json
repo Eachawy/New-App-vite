@@ -29,9 +29,10 @@
     "prettier:format": "prettier --write \"{,.blueprint/**/,src/**/}*.{md,json,yml,js,cjs,mjs,ts,cts,mts,java,html,tsx,css,scss}\"",
     "sonar": "sonar-scanner",
     "start": "npm run webapp:dev --",
-    "pretest": "npm run lint",
+    "pretest": "npm run lint && npm run typecheck",
     "test": "npm run vitest-run --",
     "test:watch": "npm run vitest --",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.vitest.json",
     "vitest": "vitest",
     "vitest-run": "vitest run --coverage",
     "watch": "concurrently 'npm run start' npm:backend:start",
@@ -41,6 +42,17 @@
     "webapp:dev": "vite",
     "webapp:prod": "npm run clean-www && npm run webapp:build:prod --",
     "webapp:test": "npm run test --"
+  },
+  "allowScripts": {
+    "cypress": true
+  },
+  "lint-staged": {
+    "{,src/**/}*.{md,json,yml,html,css,scss}": [
+      "prettier --write"
+    ],
+    "{,src/**/}*.{js,cjs,mjs,ts,cts,mts,tsx}": [
+      "eslint --fix"
+    ]
   },
   "config": {
     "default_environment": "prod"
@@ -107,8 +119,5 @@
   },
   "engines": {
     "node": ">=24.21.0"
-  },
-  "allowScripts": {
-    "cypress": true
   }
 }

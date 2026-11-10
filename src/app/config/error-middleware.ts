@@ -1,14 +1,22 @@
-const getErrorMessage = errorData => {
+import type { Middleware } from '@reduxjs/toolkit';
+
+import type { FieldErrorVM } from 'app/shared/jhipster/problem-details';
+
+type ErrorData = { message?: string; fieldErrors?: FieldErrorVM[] };
+type ErrorAction = { type: string; error?: { message?: string; response?: { data?: ErrorData } } };
+
+const getErrorMessage = (errorData: ErrorData) => {
   let { message } = errorData;
   if (errorData.fieldErrors) {
-    errorData.fieldErrors.forEach(fErr => {
+    errorData.fieldErrors.forEach((fErr: FieldErrorVM) => {
       message += `\nfield: ${fErr.field}, Object: ${fErr.objectName}, message: ${fErr.message}\n`;
     });
   }
   return message;
 };
 
-export default () => next => action => {
+const errorMiddleware: Middleware = () => next => (rawAction: unknown) => {
+  const action = rawAction as ErrorAction;
   /**
    *
    * The error middleware serves to log error messages from dispatch
@@ -27,3 +35,5 @@ export default () => next => action => {
   // Dispatch initial action
   return next(action);
 };
+
+export default errorMiddleware;

@@ -4,14 +4,12 @@
     "target": "es2024",
     "module": "esnext",
     "moduleResolution": "bundler",
+    "noEmit": true,
     "sourceMap": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "removeComments": false,
-    "noImplicitAny": false,
-    "rootDir": "./src/app",
-    "outDir": "target/classes/static/app",
-    "lib": ["dom", "es2024"],
+    "strict": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "lib": ["dom", "dom.iterable", "es2024"],
     "types": ["vite/client"],
     "allowJs": true,
     "checkJs": false,
@@ -21,6 +19,5 @@
     "importHelpers": true
   },
   "include": ["src/app"],
-  "exclude": ["node_modules", "**/*.spec.ts", "**/*.spec.tsx", "vitest.config.ts"],
-  "references": [{ "path": "./tsconfig.vitest.json" }]
+  "exclude": ["node_modules", "**/*.spec.ts", "**/*.spec.tsx"]
 }

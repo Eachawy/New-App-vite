@@ -57,7 +57,9 @@ const config = defineConfig({
     },
   },
   resolve: {
-    tsconfigPaths: true,
+    alias: {
+      app: fileURLToPath(new URL('./src/app', import.meta.url)),
+    },
   },
   define: {
     DEVELOPMENT: JSON.stringify(development),

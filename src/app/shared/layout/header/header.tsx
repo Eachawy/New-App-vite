@@ -1,36 +1,35 @@
-import React, { useEffect, useRef } from "react";
-import { Nav, Navbar } from "react-bootstrap";
-import { Storage, Translate } from "react-jhipster";
+import React from 'react';
+import { Storage } from 'react-jhipster';
 
-import LoadingBar, { LoadingBarRef } from "react-top-loading-bar";
-
-import { useAppDispatch, useAppSelector } from "app/config/store";
-import { setLocale } from "app/shared/reducers/locale";
-import { AccountMenu, AdminMenu, EntitiesMenu, LocaleMenu } from "../menus";
-
-import { Brand, Home } from "./header-components";
+import { useAppDispatch } from 'app/config/store';
+import { languages } from 'app/config/translation';
+import { setLocale } from 'app/shared/reducers/locale';
 
 export interface IHeaderProps {
   currentLocale: string;
 }
 
-const Header = (props: IHeaderProps) => {
+const Header = ({ currentLocale }: IHeaderProps) => {
   const dispatch = useAppDispatch();
 
-  const handleLocaleChange = (langKey) => {
-    Storage.session.set("locale", langKey);
-    dispatch(setLocale(langKey));
+  const nextLocale = currentLocale === 'en' ? 'ar' : 'en';
+
+  const handleLocaleChange = (langKey: string) => {
+    Storage.session.set('locale', langKey);
+    void dispatch(setLocale(langKey));
   };
 
   return (
     <div id="app-header">
-      <div
-        onClick={() =>
-          handleLocaleChange(props.currentLocale === "en" ? "ar" : "en")
-        }
+      <button
+        type="button"
+        className="btn btn-link"
+        lang={nextLocale}
+        aria-label={`Switch language to ${languages[nextLocale]?.name ?? nextLocale}`}
+        onClick={() => handleLocaleChange(nextLocale)}
       >
-        {props.currentLocale}
-      </div>
+        {languages[nextLocale]?.name ?? nextLocale}
+      </button>
     </div>
   );
 };

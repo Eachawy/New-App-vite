@@ -1,7 +1,3 @@
-import { loadIcons } from './config/icon-loader';
-
-loadIcons();
-
 Object.assign(globalThis as any, {
   IS_REACT_ACT_ENVIRONMENT: true,
   SERVER_API_URL: '',

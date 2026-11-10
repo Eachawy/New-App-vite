@@ -2,7 +2,6 @@ import React from 'react';
 
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
 import AppComponent from 'app/app';
 import getStore from 'app/config/store';

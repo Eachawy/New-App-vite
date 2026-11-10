@@ -2,16 +2,28 @@ import React from 'react';
 import { Translate } from 'react-jhipster';
 import { Navigate, PathRouteProps, useLocation } from 'react-router';
 
-import { useAppSelector } from 'app/config/store';
 import ErrorBoundary from 'app/shared/error/error-boundary';
 
 interface IOwnProps extends PathRouteProps {
+  /** True once the app knows whether a session exists; nothing is rendered before that. */
+  sessionHasBeenFetched: boolean;
+  isAuthenticated: boolean;
+  /** Authorities of the current user. */
+  authorities?: string[];
   hasAnyAuthorities?: string[];
   children: React.ReactNode;
 }
 
-const PrivateRoute = ({ children, hasAnyAuthorities = [], ...rest }: IOwnProps) => {
+const PrivateRoute = ({
+  children,
+  sessionHasBeenFetched,
+  isAuthenticated,
+  authorities = [],
+  hasAnyAuthorities = [],
+  ...rest
+}: IOwnProps) => {
   const pageLocation = useLocation();
+  const isAuthorized = hasAnyAuthority(authorities, hasAnyAuthorities);
 
   if (!children) {
     throw new Error(`A component needs to be specified for private route for path ${rest.path}`);

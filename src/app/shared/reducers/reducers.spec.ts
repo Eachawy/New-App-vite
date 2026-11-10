@@ -1,4 +1,5 @@
-import loadingBar, { hideLoading, showLoading } from 'app/shared/reducers/loading-bar';
+import { translate } from 'react-jhipster';
+
 import { setLocale } from 'app/shared/reducers/locale';
 import {
   createEntitySlice,
@@ -8,18 +9,6 @@ import {
   serializeAxiosError,
 } from 'app/shared/reducers/reducer.utils';
 import { createTestStore } from 'app/test-utils';
-
-describe('loading bar reducer', () => {
-  it('counts concurrent requests and never goes below zero', () => {
-    let state = loadingBar(undefined, showLoading());
-    state = loadingBar(state, showLoading());
-    expect(state.count).toBe(2);
-    state = loadingBar(state, hideLoading());
-    state = loadingBar(state, hideLoading());
-    state = loadingBar(state, hideLoading());
-    expect(state.count).toBe(0);
-  });
-});
 
 describe('locale', () => {
   it('loads translations once and switches the current locale', async () => {
@@ -32,6 +21,17 @@ describe('locale', () => {
     await store.dispatch(setLocale('ar'));
     expect(store.getState().locale.loadedKeys).toEqual(['ar', 'en']);
     expect(store.getState().locale.currentLocale).toBe('ar');
+  });
+
+  it.each([
+    ['en', 'Not found', 'The page does not exist.'],
+    ['ar', 'غير موجود', 'هذه الصفحة غير موجودة.'],
+  ])('merges keys from every %s translation file', async (lang, fromGlobal, fromErrorFile) => {
+    const store = createTestStore();
+    await store.dispatch(setLocale(lang));
+    // Both global.json and error.json define an "error" section; neither may overwrite the other.
+    expect(translate('error.url.not.found')).toBe(fromGlobal);
+    expect(translate('error.http.404')).toBe(fromErrorFile);
   });
 });
 

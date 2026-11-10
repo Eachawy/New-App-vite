@@ -1,7 +1,6 @@
 Object.assign(globalThis as any, {
   IS_REACT_ACT_ENVIRONMENT: true,
   SERVER_API_URL: '',
-  VERSION: '0.0.1-test',
   DEVELOPMENT: false,
 });
 

@@ -2,7 +2,7 @@ import { Storage } from 'react-jhipster';
 
 import axios, { type AxiosError, type AxiosResponse, type InternalAxiosRequestConfig } from 'axios';
 
-import { AUTHENTICATION_TOKEN_KEY } from 'app/shared/jhipster/constants';
+import { AUTHENTICATION_TOKEN_KEY } from 'app/config/constants';
 
 const TIMEOUT = 1 * 60 * 1000;
 axios.defaults.timeout = TIMEOUT;

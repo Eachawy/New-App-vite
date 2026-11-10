@@ -1,11 +1,9 @@
 import eslint from '@eslint/js';
 import react from '@eslint-react/eslint-plugin';
 import { defineConfig } from 'eslint/config';
-import cypress from 'eslint-plugin-cypress';
 import prettier from 'eslint-plugin-prettier/recommended';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
-// jhipster-needle-eslint-add-import - JHipster will add additional import here
 
 export default defineConfig(
   {
@@ -90,23 +88,5 @@ export default defineConfig(
       '@typescript-eslint/no-empty-function': 'off',
     },
   },
-  {
-    files: ['src/test/javascript/cypress/**/*.ts'],
-    extends: [...tseslint.configs.recommendedTypeChecked, cypress.configs.recommended],
-    languageOptions: {
-      parserOptions: {
-        project: ['./src/test/javascript/cypress/tsconfig.json'],
-      },
-    },
-    rules: {
-      '@typescript-eslint/no-explicit-any': 'off',
-      '@typescript-eslint/no-unsafe-argument': 'off',
-      '@typescript-eslint/no-unsafe-assignment': 'off',
-      '@typescript-eslint/no-unsafe-call': 'off',
-      '@typescript-eslint/no-unsafe-member-access': 'off',
-      '@typescript-eslint/unbound-method': 'off',
-    },
-  },
-  // jhipster-needle-eslint-add-config - JHipster will add additional config here
   prettier,
 );

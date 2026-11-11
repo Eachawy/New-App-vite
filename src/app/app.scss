@@ -1,5 +1,11 @@
-// Override Bootstrap variables
 @import 'bootstrap/scss/bootstrap';
+
+// frontend-common-library styles go here once the package is installed:
+// @import 'frontend-common-library/lib/resource/scss/components-style.css';
+
+// Legacy portal theme (layout, typography, icons, RTL overrides), copied as-is so migrated pages look the same.
+@import '../content/common';
+
 body {
   background: #fafafa;
   margin: 0;

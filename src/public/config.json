@@ -1,0 +1,29 @@
+{
+  "environment": "dev",
+  "api": {
+    "gatewayUrl": "http://localhost:8080/",
+    "vlsUrl": "http://localhost:8081/",
+    "dlsUrl": "http://localhost:8082/"
+  },
+  "frontendUrls": {
+    "UMS": "http://localhost:9001/",
+    "VLS": "http://localhost:9002/",
+    "DLS": "http://localhost:9003/",
+    "CLS": "http://localhost:9004/",
+    "CVS": "http://localhost:9005/",
+    "COMMON": "http://localhost:9000/common/",
+    "SDDI": "http://localhost:9006/",
+    "RTA": "https://www.rta.ae/"
+  },
+  "requestEncryption": { "enabled": false },
+  "session": {
+    "refreshTokenEnabled": true,
+    "idleMinutes": 15,
+    "expiredUrl": "/session-expired"
+  },
+  "features": {
+    "newOtp": false,
+    "mahboub": false
+  },
+  "googleMapsKey": ""
+}

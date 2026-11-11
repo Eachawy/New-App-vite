@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20.57" height="16" viewBox="0 0 20.57 16">
+  <g id="DrivingLicense" transform="translate(0 -66.7)">
+    <g id="Group_1" data-name="Group 1" transform="translate(0 66.7)">
+      <path id="Path_1" data-name="Path 1" d="M18.352,66.7H2.218A2.217,2.217,0,0,0,0,68.918V80.482A2.22,2.22,0,0,0,2.218,82.7H18.352a2.22,2.22,0,0,0,2.218-2.218V68.918A2.217,2.217,0,0,0,18.352,66.7ZM9.016,75.778H7.985v-.885a1.536,1.536,0,0,0-1.532-1.532h-1.6a1.536,1.536,0,0,0-1.532,1.532v.885H2.287v-6.73h6.73Zm8.125-3.041H11.427V71.6h5.715Zm0-2.287H11.427V69.309h5.715Z" transform="translate(0 -66.7)" fill="#333"/>
+      <path id="Path_2" data-name="Path 2" d="M132.255,183.311a1.155,1.155,0,1,0-1.155-1.155A1.152,1.152,0,0,0,132.255,183.311Z" transform="translate(-126.605 -177.081)" fill="#333"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,56 @@
+{
+  "transactionHistory": {
+    "transactions": "Transaction History",
+    "requestType": "Request Type",
+    "deliveryStatus": "Delivery Status",
+    "delivered": "Delivered",
+    "dateRange": "Date Range",
+    "search": "Search",
+    "draft": "Draft",
+    "underReview": "Under Review",
+    "completed": "Completed",
+    "cancelled": "Cancelled",
+    "cancelService": "Cancel Service",
+    "resumeService": "Resume Service",
+    "viewReceipt": "View Receipt",
+    "requestDetails": "Request Details",
+    "ref": "Ref",
+    "delivery": "Delivery",
+    "trackDelivery": "track delivery",
+    "loadMore": "Load More",
+    "emptyStateMsg": "You do not have any transactions for the entered search criteria.",
+    "error": {
+      "dateRangeExceeded": "Date range cannot exceed 30 days",
+      "dateRangeInvalid": "Please enter valid date range"
+    },
+    "deliveryConst": {
+      "DRAFT": "Draft",
+      "UNDER_PROCESSING": "Under Processing",
+      "PENDING_COLLECTION": "Pending Collection",
+      "IN_DELIVERY": "In Delivery",
+      "FAILED_TO_DELIVER": "Failed to Deliver",
+      "DELIVERED": "Delivered"
+    },
+    "viewAction": "View Actions",
+    "yesCancel": "Confirm",
+    "no": "No",
+    "cancelServiceRequestQu": "You are about to cancel this service request!"
+  },
+  "transactionHistoryDetails": {
+    "transactionDetails": "Transaction Details",
+    "regestrationRenewal": "Vehicle Registration Renewal",
+    "reqNo": "Request no",
+    "deliverTo": "Deliver to",
+    "vehicle": "Vehicle",
+    "deliveryStatus": "Delivery status",
+    "expectedDate": "Expected delivery date",
+    "adress": "Address",
+    "printDownloadReceipt": "Print/Download Receipt",
+    "trackDelivery": "Track Delivery",
+    "fees": "Fees",
+    "service": "Service",
+    "amount": "Amount (AED)",
+    "total": "Total",
+    "scooter": "Scooter"
+  }
+}

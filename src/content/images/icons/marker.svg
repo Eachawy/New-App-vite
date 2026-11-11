@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="132" height="132" viewBox="0 0 132 132">
+  <g id="Group_16980" data-name="Group 16980" transform="translate(-654.619 -536.619)">
+    <circle id="Ellipse_478" data-name="Ellipse 478" cx="66" cy="66" r="66" transform="translate(654.619 536.619)" fill="#f1f1f1"/>
+    <g id="Group_16977" data-name="Group 16977" transform="translate(691.91 564.341)">
+      <g id="location-pin" transform="translate(0 5.088)">
+        <path id="Path_5098" data-name="Path 5098" d="M24,8.971A10.642,10.642,0,1,0,34.637,19.613,10.642,10.642,0,0,0,24,8.971Zm0,15.963a5.321,5.321,0,1,1,5.321-5.321A5.321,5.321,0,0,1,24,24.934Z" transform="translate(4.919 9.317)" fill="#ef9fc4"/>
+        <path id="Path_5099" data-name="Path 5099" d="M54.991,9.7A28.92,28.92,0,0,0,10.312,45.936L30.415,76.8a4.926,4.926,0,0,0,8.253,0L58.774,45.936A28.92,28.92,0,0,0,54.993,9.7Zm-.676,33.33L34.542,73.387,14.77,43.032a23.6,23.6,0,1,1,39.545,0Z" transform="translate(-5.627 -1.238)" fill="#3d3c76"/>
+      </g>
+      <g id="Ellipse_479" data-name="Ellipse 479" transform="translate(38.708 0.277)" fill="#f1f1f1" stroke="#3d3c76" stroke-width="3">
+        <circle cx="17" cy="17" r="17" stroke="none"/>
+        <circle cx="17" cy="17" r="15.5" fill="none"/>
+      </g>
+      <path id="bxs-plus-circle" d="M16.9,3a13.9,13.9,0,1,0,13.9,13.9A13.911,13.911,0,0,0,16.9,3Zm6.948,15.285H18.285v5.558H15.506V18.285H9.948V15.506h5.558V9.948h2.779v5.558h5.558Z" transform="translate(38.679 0.352)" fill="#ef9fc4"/>
+    </g>
+  </g>
+</svg>

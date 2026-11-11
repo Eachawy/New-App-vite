@@ -6,7 +6,16 @@ import { toast } from 'react-toastify';
 
 import { isRejectedAction } from 'app/shared/reducers/reducer.utils';
 
-type NotificationAction = UnknownAction & { error?: { message?: string } };
+type NotificationAction = UnknownAction & {
+  error?: { message?: string };
+  meta?: { rejectedWithValue?: boolean; condition?: boolean };
+};
+
+/**
+ * RTK Query failures are handled by the API error middleware (they are rejected "with value"),
+ * and "condition" rejections are RTK skipping a duplicate request, not errors.
+ */
+const isHandledElsewhere = (action: NotificationAction) => Boolean(action.meta?.rejectedWithValue || action.meta?.condition);
 
 /** Shows a translated message when a key has a translation, otherwise the fallback text. */
 const showError = (fallback: string, key?: string) => {
@@ -32,6 +41,10 @@ const messageFromBody = (data: unknown): string | undefined => {
 const notificationMiddleware: Middleware = () => next => (rawAction: unknown) => {
   const action = rawAction as NotificationAction;
   const { error } = action;
+
+  if (isHandledElsewhere(action)) {
+    return next(action);
+  }
 
   if (isRejectedAction(action) && isAxiosError(error)) {
     const status = error.response?.status;

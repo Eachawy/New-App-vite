@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Components / Icon / 16 / Info@3x</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Components-/-Icon-/-16-/-Info">
+            <rect fill="none" x="0" y="0" width="16" height="16"></rect>
+            <path d="M8.06666667,0 C12.4666667,0 16,3.53333333 16,7.93333333 L16,7.93333333 L16,8.06666667 C16,12.4666667 12.4666667,16 8.06666667,16 L8.06666667,16 L7.93333333,16 C3.53333333,16 0,12.4666667 0,8.06666667 L0,8.06666667 L0,7.93333333 C0,3.53333333 3.53333333,0 7.93333333,0 L7.93333333,0 Z M9,6 L7,6 L7,13 L9,13 L9,6 Z M8,3 C7.44771525,3 7,3.44771525 7,4 C7,4.55228475 7.44771525,5 8,5 C8.55228475,5 9,4.55228475 9,4 C9,3.44771525 8.55228475,3 8,3 Z" id="Combined-Shape" fill="#171C8F"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,55 @@
+{
+  "transactionHistory": {
+    "transactions": "سجل المعاملات",
+    "requestType": "نوع الطلب",
+    "deliveryStatus": "حالة التوصيل",
+    "dateRange": "التاريخ",
+    "search": "بحث",
+    "draft": "مسودة",
+    "underReview": "قيد المراجعة",
+    "completed": "مكتمل",
+    "cancelled": "ملغي",
+    "cancelService": "إلغاء الخدمة",
+    "resumeService": "إكمال الخدمة",
+    "viewReceipt": "عرض الإيصال",
+    "requestDetails": "تفاصيل الطلب",
+    "ref": "المرجع",
+    "delivery": "التوصيل",
+    "trackDelivery": "تتبع الطلب",
+    "loadMore": "عرض المزيد",
+    "emptyStateMsg": "ليس لديك أي معاملات طبقاً لمعايير البحث المدخلة.",
+    "error": {
+      "dateRangeExceeded": "لا يمكن أن يتجاوز النطاق الزمني 30 يومًا",
+      "dateRangeInvalid": "الرجاء إدخال نطاق زمني صحيح"
+    },
+    "deliveryConst": {
+      "DRAFT": "مسودة",
+      "UNDER_PROCESSING": "تحت التجهيز",
+      "PENDING_COLLECTION": "بانتظار الاستلام",
+      "IN_DELIVERY": "جاري التوصيل",
+      "FAILED_TO_DELIVER": "فشل التوصيل",
+      "DELIVERED": "تم التوصيل"
+    },
+    "viewAction": "عرض الإجراءات",
+    "yesCancel": "تأكيد",
+    "no": "لا",
+    "cancelServiceRequestQu": "أنت على وشك إلغاء طلب الخدمة هذا!"
+  },
+  "transactionHistoryDetails": {
+    "transactionDetails": "تفاصيل المعاملة",
+    "regestrationRenewal": "تجديد تسجيل المركبة",
+    "reqNo": "رقم الطلب",
+    "deliverTo": "التسليم إلى",
+    "vehicle": "مركبة",
+    "deliveryStatus": "حالة التسليم",
+    "expectedDate": "تاريخ التسليم المتوقع",
+    "adress": "العنوان",
+    "printDownloadReceipt": "إيصال طباعة / تنزيل",
+    "trackDelivery": "تتبع التسليم",
+    "fees": "الرسوم",
+    "service": "الخدمة",
+    "amount": "المبلغ",
+    "total": "المجموع",
+    "scooter": "سكوتر"
+  }
+}

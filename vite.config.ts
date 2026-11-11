@@ -7,8 +7,11 @@ const development = process.env.NODE_ENV !== 'production';
 
 const config = defineConfig({
   plugins: [react()],
+  // Served under /common/ in every environment, like the legacy portal.
+  base: '/common/',
   root: fileURLToPath(new URL('./src/', import.meta.url)),
-  publicDir: fileURLToPath(new URL('./target/classes/static/public', import.meta.url)),
+  // Copied as-is to the build output; holds config.json, which each environment replaces at deploy time.
+  publicDir: fileURLToPath(new URL('./src/public', import.meta.url)),
   cacheDir: fileURLToPath(new URL('./target/.vite-cache', import.meta.url)),
   build: {
     emptyOutDir: true,
@@ -37,7 +40,7 @@ const config = defineConfig({
   },
   define: {
     DEVELOPMENT: JSON.stringify(development),
-    // Base URL for API calls. Empty means relative to the page's origin.
+    // Base URL for API calls made through config/axios-interceptor. Empty means relative to the page's origin.
     SERVER_API_URL: '""',
     // react-jhipster requires LOG_LEVEL config.
     'process.env.LOG_LEVEL': JSON.stringify(development ? 'info' : 'error'),

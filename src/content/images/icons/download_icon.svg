@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #FFFFFF;">
+    <title>Components / Icon / 16 / Download@3x</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Components-/-Icon-/-16-/-Download">
+            <rect fill="#FFFFFF" x="0" y="0" width="16" height="16"></rect>
+            <path d="M2.4,8.7 L2.4,12.9 L13.6,12.9 L13.6,8.7 L15,8.7 L15,14.3 L1,14.3 L1,8.7 L2.4,8.7 Z M8.7,1 L8.699,7.71 L11.5,4.91005051 L12.4899495,5.9 L8,10.3899495 L3.51005051,5.9 L4.5,4.91005051 L7.3,7.709 L7.3,1 L8.7,1 Z" id="icon" fill="#171C8F"></path>
+        </g>
+    </g>
+</svg>

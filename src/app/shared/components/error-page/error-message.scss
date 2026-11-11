@@ -1,0 +1,32 @@
+.errorComponent {
+  text-align: center;
+  margin-top: 50px;
+  p,
+  a {
+    font: 0.8em/21px 'RTA-bold';
+    padding-bottom: 5px;
+  }
+  p.titel {
+    color: #ee0000;
+    text-transform: uppercase;
+  }
+  p.des {
+    color: #53565a;
+  }
+  a {
+    color: #1b0e92;
+    text-decoration: none;
+    display: inline-block;
+    font: 1em/21px 'RTA-bold';
+    text-decoration: underline;
+  }
+  &:before {
+    content: '';
+    background: url('../../../../content/images/icons/traffic_cone_red.svg') no-repeat;
+    width: 45px;
+    height: 52px;
+    background-size: contain;
+    display: block;
+    margin: 0 auto 30px auto;
+  }
+}

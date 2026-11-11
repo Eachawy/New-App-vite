@@ -1,0 +1,217 @@
+html[dir='rtl'] {
+  .aramex-delivery {
+    .title {
+      span {
+        float: left;
+      }
+    }
+
+    .delivery-box {
+      button {
+        margin: 0;
+      }
+    }
+
+    .page-actions {
+      button {
+        margin-right: 0;
+        margin-left: 8px;
+      }
+    }
+
+    .tabs {
+      // .slick-slider {
+      //   direction: ltr;
+      // }
+      ul {
+        .item {
+          padding-left: 0;
+          padding-right: 65px;
+          //justify-content: flex-end;
+
+          @media screen and (max-width: 991px) {
+            justify-content: flex-end;
+          }
+
+          &.apartment {
+            padding-left: 0px;
+            padding-right: 50px;
+          }
+
+          &:before,
+          &:after {
+            left: auto;
+            right: 0;
+          }
+        }
+      }
+
+      .slick-dots li button {
+        margin: 0 2px !important;
+      }
+    }
+
+    .tabs-contents {
+      .address-format {
+        padding-left: 0;
+        padding-right: 60px;
+
+        &::before {
+          left: auto;
+          right: 15px;
+        }
+
+        p {
+          span {
+            padding-right: 0;
+            padding-left: 15px;
+
+            &:after {
+              right: auto;
+              left: 8px;
+            }
+          }
+        }
+      }
+    }
+
+    .custom-calendar {
+      .p-datepicker-header {
+        .p-link {
+          .pi {
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+
+    .calendar-instructions {
+      p {
+        &.colores {
+          span {
+            padding-left: 0;
+            padding-right: 30px;
+
+            &:before {
+              left: auto;
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+    .manual-international-number {
+      .uaeCode,
+      .countryCode {
+        margin-right: 0px;
+        margin-left: 10px;
+      }
+
+      .p-dropdown .p-dropdown-label {
+        padding: 13px 14px 5px 10px !important;
+      }
+    }
+
+    .whatsNextInfo {
+      ul {
+        li {
+          padding-left: 5px;
+          padding-right: 16px;
+
+          &:before {
+            left: auto;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+  .ManageDeliveryAddresses {
+    .row {
+      > div {
+        &:nth-child(even) {
+          padding-right: 15px;
+          padding-left: 0;
+
+          @media screen and (max-width: 991px) {
+            padding-right: 0;
+          }
+        }
+        &:nth-child(odd) {
+          padding-left: 15px;
+          padding-right: 0;
+          @media screen and (max-width: 991px) {
+            padding-left: 0;
+          }
+        }
+      }
+      .deliveryAddressCard {
+        .addressMob {
+          unicode-bidi: plaintext;
+        }
+        > div {
+          padding: 24px 0 24px 24px;
+
+          @media screen and (max-width: 767px) {
+            padding: 16px 24px;
+          }
+
+          .cardAction {
+            > span {
+              padding: 4px 0px 4px 8px;
+              margin-left: 12px;
+              margin-right: 0;
+
+              &:before {
+                margin-right: 0px;
+                margin-left: 8px;
+              }
+            }
+          }
+
+          > span {
+            @media screen and (max-width: 767px) {
+              background-position: top right !important;
+            }
+          }
+        }
+      }
+    }
+    .createNewAddress {
+      &:before {
+        margin-right: 0px;
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .custom-template-panel {
+    &._addressType {
+      .item-value {
+        div {
+          &:first-child {
+            background-position: top right !important;
+          }
+
+          &:last-child {
+            padding-left: 0px;
+            padding-right: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .makeDefaultShippingAddress {
+    .address-format {
+      &::before {
+        top: 9px !important;
+        width: 24px !important;
+        height: 21px !important;
+      }
+    }
+  }
+}

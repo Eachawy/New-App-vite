@@ -1,0 +1,13 @@
+{
+  "callCenterBanner": {
+    "lastLogin": "Last login",
+    "FAQ": "FAQ",
+    "reports": "Reports",
+    "viewManual": "View Manual",
+    "downloadEIDReaderSW": "Download EID reader S/W",
+    "backHomepage": "Back to homepage",
+    "switchOldDashboard": "Switch to old dashboard",
+    "backSearchPage": "Back to search page",
+    "helpDeskSystem": "Journey Help desk system"
+  }
+}

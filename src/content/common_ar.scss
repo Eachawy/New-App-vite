@@ -1,0 +1,503 @@
+@import './css/rtl.scss';
+
+html[dir='rtl'] {
+  /* bratcramp ---------------*/
+  .topBratcramp {
+    li {
+      padding-right: 0;
+      padding-left: 20px;
+
+      &:after {
+        right: auto;
+        left: 6px;
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .GC_termsAndCondationComponent {
+    h5 {
+      .tc_mainLabel {
+        // padding: 10px 35px 10px 0px;
+        padding: 10px 0px 10px 10px;
+        -webkit-unicode-bidi: plaintext;
+        -moz-unicode-bidi: plaintext;
+        -o-unicode-bidi: plaintext;
+        unicode-bidi: plaintext;
+        direction: ltr;
+
+        span {
+          unicode-bidi: plaintext;
+        }
+      }
+    }
+  }
+
+  .accordion {
+    > div {
+      &.processing {
+        .heacdAccordion {
+          .bollet {
+            &:before {
+              left: auto;
+              right: 5px;
+            }
+          }
+        }
+      }
+    }
+
+    .heacdAccordion {
+      padding: 0px 110px 0px 30px;
+
+      span {
+        right: auto;
+        left: 60px;
+      }
+
+      + div {
+        padding: 30px 90px 30px 20px;
+
+        &:before {
+          left: auto;
+          right: 25px;
+        }
+
+        @media (max-width: 990px) {
+          padding: 30px 50px 30px 10px;
+        }
+
+        @media (max-width: 768px) {
+          padding: 5px 35px 30px 1px;
+        }
+      }
+
+      &:after {
+        right: auto;
+        left: 30px;
+        background: url('./images/icons/Accordion_arrow_left.svg') no-repeat center;
+        background-size: 50%;
+
+        @media (max-width: 768px) {
+          right: auto;
+          left: 10px;
+        }
+      }
+
+      .bollet {
+        left: auto;
+        right: 14px;
+      }
+
+      &:before {
+        left: auto;
+        right: 25px;
+      }
+    }
+
+    .heacdAccordion {
+      @media screen and (max-width: 768px) {
+        &:before {
+          left: auto !important;
+          right: 15px !important;
+        }
+      }
+
+      .bollet {
+        @media screen and (max-width: 768px) {
+          left: auto !important;
+          right: 4px !important;
+        }
+      }
+    }
+
+    .phasesView {
+      @media screen and (max-width: 768px) {
+        padding: 20px 30px 20px 10px !important;
+
+        &:before {
+          right: 15px !important;
+          left: auto !important;
+        }
+      }
+    }
+  }
+
+  .journey {
+    .accordion {
+      .heacdAccordion {
+        padding: 0px 60px 0px 30px;
+
+        + div {
+          padding: 0px 60px 20px 20px;
+        }
+      }
+    }
+  }
+
+  .box-view-journey {
+    .boxView {
+      h2 {
+        justify-content: right;
+      }
+    }
+  }
+
+  .filteredTabs {
+    ul {
+      li {
+        margin-right: 0;
+        margin-left: 40px;
+      }
+    }
+  }
+
+  .timelinePageHolder {
+    .page-body {
+      .timeline {
+        .stage {
+          .timeline-container {
+            .timeline-body {
+              .left {
+                padding-left: 0;
+                padding-right: 40px;
+
+                &:before {
+                  left: auto;
+                  right: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .trs-search {
+        &:after {
+          right: auto;
+          left: 10px;
+        }
+      }
+    }
+
+    &._transactionHistory {
+      .page-body {
+        .transactions-filters {
+          > div {
+            padding-right: 0;
+            padding-left: 10px;
+
+            &.custom-search {
+              &::before {
+                left: auto;
+                right: 10px;
+              }
+
+              .GC_inputForm {
+                input {
+                  padding-left: 15px;
+                  padding-right: 35px;
+                }
+              }
+            }
+
+            &.action {
+              padding-left: 0;
+            }
+          }
+        }
+
+        .transactions-list {
+          .timeline {
+            padding-left: 0rem;
+            padding-right: 5rem;
+
+            &:before {
+              left: auto;
+              right: 32px;
+            }
+
+            .timeline-container {
+              .timeline-icon {
+                left: auto;
+                right: -95px;
+              }
+
+              .timeline-body {
+                &::before {
+                  left: auto;
+                  right: -5px;
+                }
+
+                .left {
+                  padding: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &._transactionHistoryDetails {
+      .box-with-shadow {
+        .v-registration {
+          .list-unstyled {
+            li {
+              .GC_plate {
+                margin-left: 0;
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .date-range {
+    .p-calendar {
+      .p-inputtext {
+        border-right: 1px solid #d5d5d5;
+        border-left: 0;
+        padding: 10px 10px 6px 0px;
+
+        &:focus,
+        &:hover {
+          border-right: 1px solid #d5d5d5 !important;
+        }
+      }
+
+      .p-datepicker-trigger {
+        border-right: 0;
+        border-left: 1px solid #d5d5d5;
+      }
+    }
+  }
+
+  .date-range-panel {
+    &.p-datepicker {
+      .p-datepicker-header {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  .viewActionList {
+    > div {
+      &:after {
+        background-position: -6px 0;
+      }
+    }
+
+    > ul {
+      left: 0;
+      right: auto;
+    }
+  }
+
+  .refundIBANTracker {
+    .messageContainer {
+      span {
+        right: auto;
+        left: 24px;
+      }
+
+      .messageBanner {
+        &.T_info {
+          &::before {
+            right: 16px;
+            transform: scaleX(-1);
+          }
+        }
+
+        &.T_violations {
+          &::before {
+            left: auto;
+            right: 16px;
+          }
+        }
+
+        &.T_success {
+          &::before {
+            left: auto;
+            right: 20px;
+          }
+        }
+      }
+    }
+
+    .addRefundIBANPage {
+      display: flex;
+      flex-direction: column;
+
+      .messageBanner {
+        &.T_violations:before {
+          right: 24px;
+        }
+      }
+
+      .GC_inputForm {
+        .p-inputtext {
+          direction: rtl;
+        }
+      }
+
+      .BtnStyle {
+        width: fit-content;
+
+        @media screen and (max-width: 767px) {
+          width: 100%;
+        }
+      }
+
+      // .addIBANContentRow {
+
+      // }
+    }
+
+    .IBANInfoDiv {
+      h3 {
+        &::before {
+          left: auto;
+          right: -6px;
+        }
+      }
+    }
+
+    .iban-hint {
+      &::before {
+        left: auto;
+        right: -2px;
+      }
+    }
+
+    .titleDiv {
+      h3 {
+        &.icon_info {
+          &::before {
+            right: auto;
+            left: -22px;
+          }
+        }
+      }
+    }
+  }
+
+  .linkeWalletPage {
+    .mainContainer {
+      > .innerContainer {
+        .GC_inputForm {
+          padding: 0 0 0 16px;
+
+          @media screen and (max-width: 768px) {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .eWalletDetailsPage {
+    .mainContainer {
+      > .innerContainer {
+        .walletInfo {
+          @media screen and (max-width: 1200px) {
+            width: 60%;
+          }
+
+          @media screen and (max-width: 992px) {
+            width: 64%;
+          }
+
+          @media screen and (max-width: 768px) {
+            width: 100%;
+          }
+
+          .infoDiv p {
+            small {
+              text-align: left;
+            }
+          }
+
+          .unlinkRTAeWallet p {
+            font: 15px / 16px 'RTA-bold';
+          }
+
+          > span:last-child {
+            margin: 0 14% 0 4%;
+
+            @media screen and (max-width: 1200px) {
+              margin: 0 14% 0 4%;
+              font: 13px / 16px 'RTA-bold';
+            }
+
+            @media screen and (max-width: 768px) {
+              margin: 0 19% 0 10%;
+            }
+
+            &:before {
+              right: -38px;
+              left: auto;
+              transform: scaleX(1);
+            }
+          }
+
+          .unLinkConfirmationMsg {
+            font: 16px/22px 'RTA-bold';
+          }
+
+          .unlinkInfoMsg {
+            font: 14px/20px 'RTA' !important;
+          }
+
+          .unLinkActionRow {
+            .BtnStyle {
+              width: 48%;
+
+              @media screen and (max-width: 768px) {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .manageAssociatedFileContainer {
+      table {
+        thead {
+          th {
+            &:first-child {
+              padding-right: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .noWalletLinked {
+    > div {
+      > div {
+        .infoMsg {
+          &::before {
+            transform: scaleX(-1);
+          }
+
+          .close-msg-icon {
+            margin: 0 auto 0 0;
+          }
+        }
+
+        .walletIcon {
+          font: 12px / 12px 'RTA';
+          padding-bottom: 20px;
+        }
+      }
+    }
+  }
+}

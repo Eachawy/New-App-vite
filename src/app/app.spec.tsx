@@ -1,21 +1,35 @@
 import React from 'react';
 
+import { Provider } from 'react-redux';
+
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 
 import { isRTL, languages, locales, setTextDirection } from 'app/config/translation';
 import Home from 'app/modules/home/home';
 import ErrorBoundary from 'app/shared/error/error-boundary';
 import PageNotFound from 'app/shared/error/page-not-found';
-import Header from 'app/shared/layout/header/header';
+import App from 'app/app';
+import { applyTestConfig, createTestStore } from 'app/test-utils';
 import { renderWithProviders } from 'app/test-utils';
 
-describe('Header', () => {
-  it('switches the language with an accessible button', async () => {
-    const { store } = renderWithProviders(<Header currentLocale="en" />);
+describe('App shell', () => {
+  it('renders the header, the home page at the base path and switches language', async () => {
+    applyTestConfig();
+    window.history.pushState({}, '', import.meta.env.BASE_URL);
+    const store = createTestStore();
+    render(
+      <Provider store={store}>
+        <App />
+      </Provider>,
+    );
+    expect(screen.getByRole('heading', { level: 1 })).toBeTruthy();
+    expect(screen.getByRole('contentinfo')).toBeTruthy();
+
     const button = screen.getByRole('button', { name: /switch language/i });
     expect(button.textContent).toBe(languages.ar.name);
     fireEvent.click(button);
     await waitFor(() => expect(store.getState().locale.currentLocale).toBe('ar'));
+    await waitFor(() => expect(document.documentElement.getAttribute('dir')).toBe('rtl'));
   });
 });
 

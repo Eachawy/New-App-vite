@@ -3,36 +3,47 @@ import './app.scss';
 import 'app/config/dayjs';
 
 import React, { useEffect } from 'react';
+import { Storage } from 'react-jhipster';
 import { BrowserRouter } from 'react-router';
 import { ToastContainer } from 'react-toastify';
-import { useAppSelector } from 'app/config/store';
+
+import { useAppDispatch, useAppSelector } from 'app/config/store';
 import AppRoutes from 'app/routes';
 import ErrorBoundary from 'app/shared/error/error-boundary';
+import { setLocale } from 'app/shared/reducers/locale';
+import { NewRTAFooterComponent, NewRTAHeaderComponent } from 'app/shared/ui';
 
-import Header from 'app/shared/layout/header/header';
-import { setTextDirection } from './config/translation';
+import { isRTL, setTextDirection } from './config/translation';
 
-const baseHref = document.querySelector('base')!.getAttribute('href')!.replace(/\/$/, '');
+/** Router base path, e.g. "/common" (Vite's `base` without the trailing slash). */
+const basename = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 export const App = () => {
+  const dispatch = useAppDispatch();
   const currentLocale = useAppSelector(state => state.locale.currentLocale);
 
   useEffect(() => {
     setTextDirection(currentLocale);
   }, [currentLocale]);
 
-  const paddingTop = '60px';
+  const onLocaleChange = (langKey: string) => {
+    Storage.session.set('locale', langKey);
+    void dispatch(setLocale(langKey));
+  };
+
   return (
-    <BrowserRouter basename={baseHref}>
-      <div className="app-container" style={{ paddingTop }}>
+    <BrowserRouter basename={basename}>
+      <div className="app-container">
         <ToastContainer position="top-left" className="toastify-container" toastClassName="toastify-toast" />
         <ErrorBoundary>
-          <Header currentLocale={currentLocale} />
+          <NewRTAHeaderComponent currentLocale={currentLocale} onLocaleChange={onLocaleChange} isRTL={isRTL} />
         </ErrorBoundary>
-        <ErrorBoundary>
-          <AppRoutes />
-        </ErrorBoundary>
-        {/* Footer  */}
+        <main className="container umsPortal">
+          <ErrorBoundary>
+            <AppRoutes />
+          </ErrorBoundary>
+        </main>
+        <NewRTAFooterComponent currentLocale={currentLocale} />
       </div>
     </BrowserRouter>
   );

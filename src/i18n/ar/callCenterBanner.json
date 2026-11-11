@@ -1,0 +1,13 @@
+{
+  "callCenterBanner": {
+    "lastLogin": "آخر تسجيل دخول",
+    "FAQ": "FAQ",
+    "reports": "التقارير",
+    "viewManual": "عرض الدليل",
+    "downloadEIDReaderSW": "تحميل قارئ الهوية",
+    "backHomepage": "العوده الى الصفحة الرئيسيه",
+    "switchOldDashboard": "التبديل إلى لوحة التحكم القديمه",
+    "backSearchPage": "الرجوع الى صفحة البحث",
+    "helpDeskSystem": "الذهاب الى نظام مكتب المساعدة"
+  }
+}
